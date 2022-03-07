@@ -20,26 +20,21 @@ function Hero() {
                 Random recipes from the web!
               </span>
             </h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
             <div className="used-by">
               <p>USED BY</p>
-              <div className="icons">
+
+              <div className="icons ">
                 <i>
                   <FaDatabase />
-                  Staxx
+                  Lorem
                 </i>
                 <i>
                   <FaAsterisk />
-                  Star AI
+                  Ipsum
                 </i>
                 <i>
                   <FaAccusoft />
-                  Accusoft
+                  Dolor
                 </i>
               </div>
             </div>
