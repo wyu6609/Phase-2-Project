@@ -5,14 +5,14 @@ const RecipeCard = ({ title, calories, image, ingredients }) => {
     <div>
       <h1 className={style.recipe}>{title}</h1>
       <ol>
-        <div className="recipe">
+        {/* <div className="recipe">
           {ingredients.map((ingredient) => (
             <li>{ingredient.text}</li>
           ))}
-        </div>
+        </div> */}
       </ol>
-      <p>{calories} calories</p>
       <img src={image} alt="" />
+      <p>{parseInt(calories)} calories</p>
     </div>
   );
 };
