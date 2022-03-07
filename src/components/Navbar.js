@@ -25,17 +25,13 @@ const Navbar = () => {
           </li>
           <li className="nav-item">
             <Link to="/" className="nav-link">
-              Pricing
+              Search A Recipe
             </Link>
           </li>
+
           <li className="nav-item">
             <Link to="/" className="nav-link">
-              FAQ
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/" className="nav-link">
-              Contact
+              Your Favorites
             </Link>
           </li>
         </ul>
