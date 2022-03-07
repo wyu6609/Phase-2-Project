@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./SearchRecipe.css";
+import RecipeCard from "./RecipeCard";
 
 const SearchRecipe = () => {
   const APP_ID = "4038b7cf";
@@ -7,7 +8,7 @@ const SearchRecipe = () => {
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
-  const [query, setQuery] = useState("chicken");
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     getRecipes();
@@ -35,19 +36,27 @@ const SearchRecipe = () => {
   return (
     <div className="App">
       <form onSubmit={getSearch} className="search-form">
-        {/* SEARCH BAR INPUT */}
         <input
           className="search-bar"
           type="text"
           value={search}
           onChange={updateSearch}
-          placeHolder="Search a recipe..."
         />
         <button className="search-button" type="submit">
           Search
         </button>
       </form>
-      <div className="recipes">{/* INSERT CARD MAP HERE */}</div>
+      <div className="recipes">
+        {recipes.map((recipe) => (
+          <RecipeCard
+            key={recipe.recipe.label}
+            title={recipe.recipe.label}
+            calories={recipe.recipe.calories}
+            image={recipe.recipe.image}
+            ingredients={recipe.recipe.ingredients}
+          />
+        ))}
+      </div>
     </div>
   );
 };

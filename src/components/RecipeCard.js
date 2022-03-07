@@ -1,24 +1,20 @@
 import React from "react";
-// import Card from "react-bootstrap/card";
-// import { Button } from "react-bootstrap";
-
-// const RecipeCard = () => {
-function RecipeCard({ recipe }) {
-  // create a Function to pull out the item id
-  // function onClicky() {
-  // console.log to ensure itemis pulled
-  // console.log(item)
-  //   changeReorder(item);
-  // }
-
+import style from "./RecipeCard.css";
+const RecipeCard = ({ title, calories, image, ingredients }) => {
   return (
-    <div className="card" onClick={() => console.log("clicked")}>
-      <img></img>
-      <h3></h3>
-      <h4></h4>
-      <button onClick={(event) => console.log("clicked")}>Delete</button>
+    <div>
+      <h1 className={style.recipe}>{title}</h1>
+      <ol>
+        <div className="recipe">
+          {ingredients.map((ingredient) => (
+            <li>{ingredient.text}</li>
+          ))}
+        </div>
+      </ol>
+      <p>{calories} calories</p>
+      <img src={image} alt="" />
     </div>
   );
-}
+};
 
 export default RecipeCard;
